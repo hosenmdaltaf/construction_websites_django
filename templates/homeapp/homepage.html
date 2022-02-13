@@ -1,0 +1,415 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="wf-section">
+    <div data-w-id="41e17e6f-5a50-644f-1450-1fee60cef862" style="opacity:1" class="div-block">
+        <div class="container-3 w-container">
+
+                <h2 class="heading-2" style="color:white;">DTECH CORP.LTD </h2>
+            
+                </div>
+            <h1 class="hero-heading white">Innovative Facade Specialist</h1>
+            <h1 class="hero-heading white _2">Innovative Facade Specialist</h1>
+        </div>
+    </div>
+
+
+<div id="about1" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Who we are</h2>
+                </div>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph">At the forefront of the latest industry standards we deliver exceptional building envelope systems and facade engineering consultant services to improve the quality and efficiency of today’s buildings.</p>
+                </div>
+            </div>
+            <div title="photo of expo 2020 dubai sustainability pavillion" class="full-image-div"></div>
+            <div class="caption"><br/></div>
+            <p class="paragraph-70">
+                <strong class="bold-text">Excellent design and Engineering is the corner stone of all good facade Engineering Companies.<br/></strong>BES offers a complete range of facade specialist services, from design conception through to facade completion. So whether you&#x27;re looking for a comprehensive facade engineering consultancy, undertake an individual inspection or require a specification report to meet compliance regulations, we can support you. <br/><br/>Today in our facade consultant technical department has 20 employees in the facade design and engineering department consisting of senior designers, system developers, structural engineers, mechanical engineers and draftsmen. All members of this team are highly qualified, with years of experience working on many different and varied projects. We utilize all the latest software and 3D design systems for material orders, production orders, general facade design work, drafting, structural modeling and thermal analysis. <br/><br/>From managing a new-build to rectifying an existing one, or restoring a piece of architectural history, you can confidently depend on our facade engineering expertise.</p>
+        </div>
+        {% comment %} <a href="https://uploads-ssl.webflow.com/5ccaa276b7202a688a2b135c/5ef0d351f56d28b6199f7624_BES Pre Procurement Document.pdf" target="_blank" class="clear-button w-button"><span class="learn-span">Download BES brochure →</span></a> {% endcomment %}
+    </div>
+</div>
+
+
+<div id="about2" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Who we&#x27;re for</h2>
+                </div>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph">We complement architects, developers, project<strong class="bold-intro-text"> </strong>managers, main contractors, facade contractors<strong class="bold-intro-text"> </strong>and private houses– providing them with expert technical input.</p>
+                </div>
+            </div>
+            <div Title="photo of jumeirah gate" class="full-image-div _2"></div>
+        </div>
+        <div class="caption"><br/></div>
+        <p class="paragraph-70"><strong class="bold-text-3">We understand that every project and every client is different. <br/></strong>In every Facade designing project the team demonstrates a complete understanding of the project requirements by utilizing the latest available products and meeting all required technical specifications. We ensure that all materials specified meet the economic, technical and visual parameters and translate the Architect&#x27;s vision into optimized facade designs that the client can both appreciate and afford.</p>
+    </div>
+</div>
+
+
+<div id="consultancy" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Facade Consultancy</h2>
+                </div>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph">From architectural concept, preparation of facade performance specification, design development, through to off-site and on-site inspection, BES offers a complete facade and building envelope consultancy.</p>
+                </div>
+            </div>
+            <div class="icon-wrapper">
+			
+                {% for con in consultancys %}
+                <div data-w-id="ae890c6c-2e78-ab1b-a481-fa74c8bf24b1" style="opacity:0" class="icon-div dark">
+                    <img src="{{con.icon.url}}" width="52" alt="Building envelope schematic &amp; concept Design" class="icon"/>
+                    <div class="icon-text-div">
+                        <h3 class="icon-heading">{{con.title}}</h3>
+                        <p class="paragraph-71">{{con.details|safe}}.</p>
+                    </div>
+                </div>
+                {% endfor %}
+				
+              
+				
+                <div data-w-id="5cbb0fa5-6090-1191-7626-cc73ac13e75f" style="opacity:0" class="icon-div dark extra"></div>
+            </div>
+            <p class="paragraph-70"><strong class="bold-text-2">Looking to have your project evaluated?<br/></strong>Our highly qualified team establish the best facade building options available for your project and develop innovative facade design &amp; construction solutions that will provide optimal performance, construct-ability and satisfy budget constraints.<br/></p>
+            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to our consultant →</span></a>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="design" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Design + <br/>Engineering</h2>
+                </div>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph">Through exceptional design, engineering and by applying improved practices BES strives to achieve excellence in all our facade projects.</p>
+                </div>
+            </div>
+            <div class="icon-wrapper">
+
+                {% for con in design_engineerings %}
+                <div data-w-id="ae890c6c-2e78-ab1b-a481-fa74c8bf24b1" style="opacity:0" class="icon-div dark">
+                    <img src="{{con.icon.url}}" width="52" alt="Building envelope schematic &amp; concept Design" class="icon"/>
+                    <div class="icon-text-div">
+                        <h3 class="icon-heading">{{con.title}}</h3>
+                        <p class="paragraph-71">{{con.details|safe}}.</p>
+                    </div>
+                </div>
+                {% endfor %}
+			
+            
+				
+            </div>
+            <p class="paragraph-70 tight"><strong class="bold-text-4">We are experts in the increasingly complex methods and techniques available. <br/>‍</strong>BES understands the implications of different facade design solutions in terms of geometry, structural adequacy, performance, energy efficiency, procurement, fabrication, installation, program, and whole life costing.<br/></p>
+            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert →</span></a>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="management" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Project <br/>Management</h2>
+                </div>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph">We provide a fully tailored management, procurement, repair and refurbishment for facade systems design to meet commercial demands of the construction industry.</p>
+                </div>
+            </div>
+            <div class="icon-wrapper">
+			
+			
+                {% for con in project_managements %}
+                <div data-w-id="ae890c6c-2e78-ab1b-a481-fa74c8bf24b1" style="opacity:0" class="icon-div dark">
+                    <img src="{{con.icon.url}}" width="52" alt="Building envelope schematic &amp; concept Design" class="icon"/>
+                    <div class="icon-text-div">
+                        <h3 class="icon-heading">{{con.title}}</h3>
+                        <p class="paragraph-71">{{con.details|safe}}.</p>
+                    </div>
+                </div>
+                {% endfor %}
+				
+            </div>
+            <p class="paragraph-70"><strong class="bold-text-5">Our Pioneering Creativity Delivers World-Class Results.<br/></strong>As a market-focused, process-centered facade engineering company, BES delivers the highest value to our customers through developing and delivering innovative solutions, products and services. <br/></p>
+            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert →</span></a>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="scope" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Scope</h2>
+                </div>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph tight">Through innovative facade consulting, design and engineering services. BES brings the architects’ vision to life.</p>
+                </div>
+            </div>
+            <div class="collection-list-wrapper-6 w-dyn-list">
+                <div role="list" class="collection-list-7 w-dyn-items w-row">
+                
+
+                   {% for scope in scopes %}
+                    <div role="listitem" class="collection-item-6 w-dyn-item w-col w-col-4">
+                        <div class="icon-div cyan left horizontal">
+                            <div class="icon-text-div horizontal">
+                                <img alt="Building envelope and facade Unitized Curtain Wall" width="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5df5f0a1fbd9267b7c5da2ce_balustrade2.svg" class="icon"/>
+                                <h3 class="icon-heading horizontal">{{scope.title|truncatechars:50}}</h3>
+                            </div>
+                            <div class="text-block-7"><a href="{% url 'projectapp:scope_detailspage' scope.pk %}" class="scope-link">View details →</a></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert→</span></a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div id="management" class="products-section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-6">
+                    <h2 class="heading-2 indent">Products</h2>
+                </div>
+                <div class="column w-col w-col-6">
+                    <p class="paragraph products">Xxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx </p>
+                </div>
+            </div>
+            <div>
+                <div class="collection-list-wrapper-8 w-dyn-list">
+                    <div role="list" class="collection-list-10 w-dyn-items w-row">
+                        <div role="listitem" class="collection-item-11 w-dyn-item w-col w-col-4">
+                            <div class="product-wrapper">
+                                <div class="icon-div left green home">
+                                    <div>
+                                        <img alt="facade bidding &amp; value engineering" height="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed74f87150cb05967a3c9f2_sliding window 2.svg" class="icon product"/>
+                                        <h3 class="icon-heading tight">Minimal Sliding Windows &amp; Doors</h3>
+                                        <a href="minimal-sliding-windows-doors.html" class="button-2 w-button"><span class="scope-link levt">View product →</span></a>
+                                    </div>
+                                </div>
+                                <img src="../uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c5901927f0955ce80bf_EXP-C-Minimal-Sliding-Windows-%26-Doors2.jpg" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 45vw, (max-width: 991px) 229.328125px, 299.984375px" srcset="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c5901927f0955ce80bf_EXP-C-Minimal-Sliding-Windows-%26-Doors2-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c5901927f0955ce80bf_EXP-C-Minimal-Sliding-Windows-%26-Doors2-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c5901927f0955ce80bf_EXP-C-Minimal-Sliding-Windows-%26-Doors2.jpg 1000w" class="product-home-images"/>
+                            </div>
+                        </div>
+                        <div role="listitem" class="collection-item-11 w-dyn-item w-col w-col-4">
+                            <div class="product-wrapper">
+                                <div class="icon-div left green home">
+                                    <div>
+                                        <img alt="facade bidding &amp; value engineering" height="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed742f7432bf51c6108ca2e_pivot window 2.svg" class="icon product"/>
+                                        <h3 class="icon-heading tight">Minimal Pivot Windows &amp; Doors</h3>
+                                        <a href="minimal-pivot-windows-doors.html" class="button-2 w-button"><span class="scope-link levt">View product →</span></a>
+                                    </div>
+                                </div>
+                                <img src="../uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c675c2d8d02dc1cb6b6_EXP-P-Minimal-Pivot-Windows-%26-Doors2.jpg" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 45vw, (max-width: 991px) 229.328125px, 299.984375px" srcset="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c675c2d8d02dc1cb6b6_EXP-P-Minimal-Pivot-Windows-%26-Doors2-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c675c2d8d02dc1cb6b6_EXP-P-Minimal-Pivot-Windows-%26-Doors2-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c675c2d8d02dc1cb6b6_EXP-P-Minimal-Pivot-Windows-%26-Doors2.jpg 1000w" class="product-home-images"/>
+                            </div>
+                        </div>
+                        <div role="listitem" class="collection-item-11 w-dyn-item w-col w-col-4">
+                            <div class="product-wrapper">
+                                <div class="icon-div left green home">
+                                    <div>
+                                        <img alt="facade bidding &amp; value engineering" height="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed76adb913571016caabc83_miniimal 2.svg" class="icon product"/>
+                                        <h3 class="icon-heading tight">Minimal Casement Windows &amp; Doors</h3>
+                                        <a href="#" class="button-2 w-condition-invisible w-button"><span class="scope-link levt">View product →</span></a>
+                                    </div>
+                                </div>
+                                <img src="../uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c8fa37f060afa9c2362_EXP-X-Minimal-Fix-%26-Hinge-Windows-%26-Doors2.jpg" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 45vw, (max-width: 991px) 229.328125px, 299.984375px" srcset="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c8fa37f060afa9c2362_EXP-X-Minimal-Fix-%26-Hinge-Windows-%26-Doors2-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c8fa37f060afa9c2362_EXP-X-Minimal-Fix-%26-Hinge-Windows-%26-Doors2-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c8fa37f060afa9c2362_EXP-X-Minimal-Fix-%26-Hinge-Windows-%26-Doors2.jpg 1000w" class="product-home-images"/>
+                            </div>
+                        </div>
+                        <div role="listitem" class="collection-item-11 w-dyn-item w-col w-col-4">
+                            <div class="product-wrapper">
+                                <div class="icon-div left green home">
+                                    <div>
+                                        <img alt="facade bidding &amp; value engineering" height="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5dec9e63675ba81fad7d7d56_unified.svg" class="icon product"/>
+                                        <h3 class="icon-heading tight">Minimal Curtain Wall</h3>
+                                        <a href="#" class="button-2 w-condition-invisible w-button"><span class="scope-link levt">View product →</span></a>
+                                    </div>
+                                </div>
+                                <img src="../uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75c9e150cb050afa41a26_EXP-F-Minimal-Curtain-Wall2.jpg" alt="" class="product-home-images"/>
+                            </div>
+                        </div>
+                        <div role="listitem" class="collection-item-11 w-dyn-item w-col w-col-4">
+                            <div class="product-wrapper">
+                                <div class="icon-div left green home">
+                                    <div>
+                                        <img alt="facade bidding &amp; value engineering" height="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed7687898eb3f514d6e58f1_glass railing.svg" class="icon product"/>
+                                        <h3 class="icon-heading tight">Glass Rails</h3>
+                                        <a href="#" class="button-2 w-condition-invisible w-button"><span class="scope-link levt">View product →</span></a>
+                                    </div>
+                                </div>
+                                <img src="../uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed760438de2cd30edde5faf_EXP-R-Glass-Balustrades-%26-Rails4.jpg" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 45vw, (max-width: 991px) 229.328125px, 299.984375px" srcset="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed760438de2cd30edde5faf_EXP-R-Glass-Balustrades-%26-Rails4-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed760438de2cd30edde5faf_EXP-R-Glass-Balustrades-%26-Rails4.jpg 925w" class="product-home-images"/>
+                            </div>
+                        </div>
+                        <div role="listitem" class="collection-item-11 w-dyn-item w-col w-col-4">
+                            <div class="product-wrapper">
+                                <div class="icon-div left green home">
+                                    <div>
+                                        <img alt="facade bidding &amp; value engineering" height="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed768879d8562bdcb20dc14_sliding vertical2.svg" class="icon product"/>
+                                        <h3 class="icon-heading tight">Minimal Vertical Sliding Windows &amp; Doors</h3>
+                                        <a href="guillotine-automatic-multi-leaf-vertical-sliding-windows-doors.html" class="button-2 w-button"><span class="scope-link levt">View product →</span></a>
+                                    </div>
+                                </div>
+                                <img src="../uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75cb7a37f0640129c23a2_EXP-G-Minimal-Vertical-Sliding-Windows-%26-Doors2.jpg" alt="" sizes="(max-width: 479px) 87vw, (max-width: 767px) 45vw, (max-width: 991px) 229.328125px, 299.984375px" srcset="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75cb7a37f0640129c23a2_EXP-G-Minimal-Vertical-Sliding-Windows-%26-Doors2-p-500.jpeg 500w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75cb7a37f0640129c23a2_EXP-G-Minimal-Vertical-Sliding-Windows-%26-Doors2-p-800.jpeg 800w, https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5ed75cb7a37f0640129c23a2_EXP-G-Minimal-Vertical-Sliding-Windows-%26-Doors2.jpg 1000w" class="product-home-images"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div id="projects" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Recent Projects</h2>
+                </div>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph">BES is responsible for leading the design, procurement, programming, testing, installation, repair and refurbishment process of facade systems, on many diverse and prestigious landmark projects especially around Middle East countries.</p>
+                </div>
+            </div>
+        </div>
+        <div class="collection-list-wrapper-3 w-dyn-list">
+            <div role="list" class="collection-list-3 w-dyn-items">
+
+
+                {% for project in projects %}
+
+                <div role="listitem" class="collection-item-4 home w-dyn-item">
+                    <div class="columns-2 w-row">
+                        <div class="column-4 w-col w-col-6">
+                            <div style="background-image:url({{project.thumnail_image.url}})" class="div-block-4">
+                                <div data-w-id="d58ab9af-f048-d56c-d2ac-602e2dbf7a22" style="opacity:0" class="location-div">
+                                    <div class="location-test home">{{project.location}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-3 w-col w-col-6">
+                            <div class="div-block-6">
+                                <div>
+                                    <h3 data-w-id="00631028-4c0c-0260-35fa-9ade0a0d1891" style="opacity:0" class="heading-6">{{project.title}}</h3>
+                                    <p data-w-id="a2185910-3675-b3b1-e871-941c3d2cea00" style="opacity:0" class="paragraph-72">{{project.details|safe|truncatechars:200}}</p>
+                                </div>
+                                <a href="{% url 'projectapp:project_detailspage'  project.pk %}" class="project-button w-button">View project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+             
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="news" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-6">
+                    <h2 class="heading-2">Latest News</h2>
+                </div>
+                <div class="column w-col w-col-6">
+                    <p class="paragraph">Find out the latest on our facade projects and our facade engineering services.</p>
+                </div>
+            </div>
+            <div class="collection-list-wrapper-5 w-dyn-list">
+                <div role="list" class="collection-list-6 w-dyn-items">
+
+                    {% for project in projects %}
+                    <div data-w-id="3da58f03-fdd8-3628-a5d2-ef6d4fe7bc7e" style="opacity:0" role="listitem" class="collection-item-2 _3 w-dyn-item">
+                        <div class="grey-div">
+                            <div data-w-id="22e1163c-45b4-b1b5-fe81-7e30a284207b" style="background-image:url({{project.thumnail_image.url}});opacity:0" class="div-block-12">
+                                <div data-w-id="2d441236-0d1c-255c-10c5-af4e1e5a25b3" style="opacity:0" class="location-div">
+                                    <div class="location-test home">{{project.location}}</div>
+                                </div>
+                            </div>
+                            <div class="service-div line news">
+                                <h3 class="heading-7">{{project.title}}</h3>
+                                <p data-w-id="d4a9fea8-e767-b6eb-0060-bd09afebcd3f" style="opacity:0" class="news-para">{{project.details|safe|truncatechars:200}}.</p>
+                                <a href="{% url 'projectapp:project_detailspage'  project.pk %}" class="project-button w-button">View project →</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+             
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="contact" class="section wf-section">
+    <div class="w-container">
+        <div class="section-div">
+            <div class="columns w-row">
+                <div class="column-2 w-col w-col-6">
+                    <h2 class="heading-2">Contact</h2>
+                </div>
+                <div class="column w-col w-col-6">
+                    <p class="paragraph">Get in touch and let us know how can help you on your next facade project or come visit our office at JLT, Dubai.</p>
+                </div>
+            </div>
+            <div data-w-id="1575a563-e1c4-ec47-c568-f401d6f02644" style="opacity:0" class="html-embed w-embed w-iframe">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.680845745981!2d90.39695083037563!3d23.79475530307877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70c15ea1de1%3A0x97856381e88fb311!2sBanani%20Model%20Town%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1644652402053!5m2!1sen!2sbd" width="940" height="550" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="html-embed-2 w-embed w-iframe">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.680845745981!2d90.39695083037563!3d23.79475530307877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70c15ea1de1%3A0x97856381e88fb311!2sBanani%20Model%20Town%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1644652402053!5m2!1sen!2sbd"  width="728" height="560" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>
+            </div>
+            
+            <h3 data-w-id="253b078d-d850-a0a1-10e0-686738a65712" style="opacity:0" class="heading-4">Building Envelope Systems</h3>
+            <p class="paragraph-70">Office 1905 Tower BB1, <br/>Mazaya Business Avenue, <br/>Jumeirah Lake Towers,<br/>Dubai - United Arab Emirates <br/>P.O Box. 283171 <br/>‍<br/>Tel: <a href="tel:+97144255985" class="link-2">+971 (4) 425 5985<br/>‍</a><br/>Email: <a href="mailto:info@bess.ae" class="link-3">info@bess.ae</a><br/></p>
+            <p class="map-link">Location: <a href="https://goo.gl/maps/UnHdKUvX5x42" target="_blank" class="link-3">View map</a><br/></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

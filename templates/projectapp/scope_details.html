@@ -1,0 +1,57 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+    <div class="scope-header wf-section">
+        <div class="container-10 w-container">
+            <div class="scope-header-div">
+                <h1 class="heading-2 scope">{{object.title}}</h1>
+                <p>{{object.short_description}}</p>
+                <!-- <p data-w-id="807b3a65-6090-54b6-b60a-1f1b2a0aba2c" style="opacity:1" class="intro w-dyn-bind-empty">
+             hi ju ------------   {{object.short_description}}</p> -->
+            </div>
+        </div>
+    </div>
+
+        <div class="container-10 w-container">
+            <div class="scope-header-div">
+  
+                <p>{{object.long_text|safe}}</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="container-10 w-container">
+            
+          
+            <div class="scope-header-div">
+                <h3 class="subhead">Scope:</h3>
+                <div role="listitem" class="collection-item-7 w-dyn-item w-col w-col-6">
+                    <a href="canopies.html" class="link-block-3 w-inline-block">
+                        <div class="text-block-6">Canopies</div>
+                    </a>
+                </div>
+                <div role="listitem" class="collection-item-7 w-dyn-item w-col w-col-6">
+                    <a href="stone-cladding.html" class="link-block-3 w-inline-block">
+                        <div class="text-block-6">Stone Cladding</div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+{% endblock %}
+
+
+
