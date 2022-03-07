@@ -21,8 +21,8 @@
                     <div>About</div>
                 </div>
                 <nav class="dropdown-list w-dropdown-list">
-                    <a href="/#about1" class="drop-link black w-dropdown-link">Who we are</a>
-                    <a href="/#about2" class="drop-link black w-dropdown-link">Who we&#x27;re for </a></nav>
+                    <a href="{% url 'homeapp:who_we_are_page' %}" class="drop-link black w-dropdown-link">Who we are</a>
+                    <a href="{% url 'homeapp:who_we_are_for_page' %}" class="drop-link black w-dropdown-link">Who we&#x27;re for </a></nav>
             </div>
             <div data-delay="0" data-hover="true" class="w-dropdown">
                 <div class="nav-button-dropdown w-dropdown-toggle">

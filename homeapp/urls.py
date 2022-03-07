@@ -6,5 +6,7 @@ app_name='homeapp'
 
 urlpatterns = [
     path('', views.home, name='homepage'),
+    path('who_we_are/', views.who_we_are, name='who_we_are_page'),
+    path('who_we_are_for/', views.who_we_are_for, name='who_we_are_for_page'),  
     
 ]

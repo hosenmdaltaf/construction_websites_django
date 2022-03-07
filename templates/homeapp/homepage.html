@@ -16,44 +16,97 @@
     </div>
 
 
-<div id="about1" class="section wf-section">
+    {% comment %} <div id="about1" class="section wf-section ">
+        <div class="w-container">
+            <div class="section-div">
+    
+                <div class="columns w-row">
+                    <div class="column-2 w-col w-col-5">
+                        <h2 class="heading-2">Who we are</h2>
+                    </div>
+                    <div class="column w-col w-col-7">
+                        <p class="paragraph">At the forefront of the latest industry standards we deliver exceptional building envelope systems and facade engineering consultant services to improve the quality and efficiency of today’s buildings.</p>
+                    </div>
+                </div>
+    
+                <div title="photo of expo 2020 dubai sustainability pavillion" class="full-image-div"></div>
+                <div class="caption"><br/></div>
+                <p class="paragraph-70">
+                    <strong class="bold-text">Excellent design and Engineering is the corner stone of all good facade Engineering Companies.<br/></strong>BES offers a complete range of facade specialist services, from design conception through to facade completion. So whether you&#x27;re looking for a comprehensive facade engineering consultancy, undertake an individual inspection or require a specification report to meet compliance regulations, we can support you. <br/><br/>Today in our facade consultant technical department has 20 employees in the facade design and engineering department consisting of senior designers, system developers, structural engineers, mechanical engineers and draftsmen. All members of this team are highly qualified, with years of experience working on many different and varied projects. We utilize all the latest software and 3D design systems for material orders, production orders, general facade design work, drafting, structural modeling and thermal analysis. <br/><br/>From managing a new-build to rectifying an existing one, or restoring a piece of architectural history, you can confidently depend on our facade engineering expertise.</p>
+            </div>
+  
+        </div>
+    </div> {% endcomment %}
+
+
+<div id="scope" class="section wf-section">
     <div class="w-container">
         <div class="section-div">
             <div class="columns w-row">
                 <div class="column-2 w-col w-col-5">
-                    <h2 class="heading-2">Who we are</h2>
+                    <h2 class="heading-2">Scope</h2>
                 </div>
                 <div class="column w-col w-col-7">
-                    <p class="paragraph">At the forefront of the latest industry standards we deliver exceptional building envelope systems and facade engineering consultant services to improve the quality and efficiency of today’s buildings.</p>
+                    <p class="paragraph tight">Through innovative facade consulting, design and engineering services. BES brings the architects’ vision to life.</p>
                 </div>
             </div>
-            <div title="photo of expo 2020 dubai sustainability pavillion" class="full-image-div"></div>
-            <div class="caption"><br/></div>
-            <p class="paragraph-70">
-                <strong class="bold-text">Excellent design and Engineering is the corner stone of all good facade Engineering Companies.<br/></strong>BES offers a complete range of facade specialist services, from design conception through to facade completion. So whether you&#x27;re looking for a comprehensive facade engineering consultancy, undertake an individual inspection or require a specification report to meet compliance regulations, we can support you. <br/><br/>Today in our facade consultant technical department has 20 employees in the facade design and engineering department consisting of senior designers, system developers, structural engineers, mechanical engineers and draftsmen. All members of this team are highly qualified, with years of experience working on many different and varied projects. We utilize all the latest software and 3D design systems for material orders, production orders, general facade design work, drafting, structural modeling and thermal analysis. <br/><br/>From managing a new-build to rectifying an existing one, or restoring a piece of architectural history, you can confidently depend on our facade engineering expertise.</p>
+            <div class="collection-list-wrapper-6 w-dyn-list">
+                <div role="list" class="collection-list-7 w-dyn-items w-row">
+                
+
+                   {% for scope in scopes %}
+                    <div role="listitem" class="collection-item-6 w-dyn-item w-col w-col-4">
+                        <div class="icon-div cyan left horizontal">
+                            <div class="icon-text-div horizontal">
+                                <img alt="Building envelope and facade Unitized Curtain Wall" width="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5df5f0a1fbd9267b7c5da2ce_balustrade2.svg" class="icon"/>
+                                <h3 class="icon-heading horizontal">{{scope.title|truncatechars:50}}</h3>
+                            </div>
+                            <div class="text-block-7"><a href="{% url 'projectapp:scope_detailspage' scope.pk %}" class="scope-link">View details →</a></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert→</span></a>
         </div>
-        {% comment %} <a href="https://uploads-ssl.webflow.com/5ccaa276b7202a688a2b135c/5ef0d351f56d28b6199f7624_BES Pre Procurement Document.pdf" target="_blank" class="clear-button w-button"><span class="learn-span">Download BES brochure →</span></a> {% endcomment %}
     </div>
 </div>
 
 
-<div id="about2" class="section wf-section">
+<div id="design" class="section wf-section">
     <div class="w-container">
         <div class="section-div">
             <div class="columns w-row">
                 <div class="column-2 w-col w-col-5">
-                    <h2 class="heading-2">Who we&#x27;re for</h2>
+                    <h2 class="heading-2">Design + <br/>Engineering</h2>
                 </div>
                 <div class="column w-col w-col-7">
-                    <p class="paragraph">We complement architects, developers, project<strong class="bold-intro-text"> </strong>managers, main contractors, facade contractors<strong class="bold-intro-text"> </strong>and private houses– providing them with expert technical input.</p>
+                    <p class="paragraph">Through exceptional design, engineering and by applying improved practices BES strives to achieve excellence in all our facade projects.</p>
                 </div>
             </div>
-            <div Title="photo of jumeirah gate" class="full-image-div _2"></div>
+            <div class="icon-wrapper">
+
+                {% for con in design_engineerings %}
+                <div data-w-id="ae890c6c-2e78-ab1b-a481-fa74c8bf24b1" style="opacity:0" class="icon-div dark">
+                    <img src="{{con.icon.url}}" width="52" alt="Building envelope schematic &amp; concept Design" class="icon"/>
+                    <div class="icon-text-div">
+                        <h3 class="icon-heading">{{con.title}}</h3>
+                        <p class="paragraph-71">{{con.details|safe}}.</p>
+                    </div>
+                </div>
+                {% endfor %}
+			
+            
+				
+            </div>
+            <p class="paragraph-70 tight"><strong class="bold-text-4">We are experts in the increasingly complex methods and techniques available. <br/>‍</strong>BES understands the implications of different facade design solutions in terms of geometry, structural adequacy, performance, energy efficiency, procurement, fabrication, installation, program, and whole life costing.<br/></p>
+            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert →</span></a>
         </div>
-        <div class="caption"><br/></div>
-        <p class="paragraph-70"><strong class="bold-text-3">We understand that every project and every client is different. <br/></strong>In every Facade designing project the team demonstrates a complete understanding of the project requirements by utilizing the latest available products and meeting all required technical specifications. We ensure that all materials specified meet the economic, technical and visual parameters and translate the Architect&#x27;s vision into optimized facade designs that the client can both appreciate and afford.</p>
     </div>
 </div>
+
 
 
 <div id="consultancy" class="section wf-section">
@@ -91,41 +144,7 @@
 
 
 
-<div id="design" class="section wf-section">
-    <div class="w-container">
-        <div class="section-div">
-            <div class="columns w-row">
-                <div class="column-2 w-col w-col-5">
-                    <h2 class="heading-2">Design + <br/>Engineering</h2>
-                </div>
-                <div class="column w-col w-col-7">
-                    <p class="paragraph">Through exceptional design, engineering and by applying improved practices BES strives to achieve excellence in all our facade projects.</p>
-                </div>
-            </div>
-            <div class="icon-wrapper">
-
-                {% for con in design_engineerings %}
-                <div data-w-id="ae890c6c-2e78-ab1b-a481-fa74c8bf24b1" style="opacity:0" class="icon-div dark">
-                    <img src="{{con.icon.url}}" width="52" alt="Building envelope schematic &amp; concept Design" class="icon"/>
-                    <div class="icon-text-div">
-                        <h3 class="icon-heading">{{con.title}}</h3>
-                        <p class="paragraph-71">{{con.details|safe}}.</p>
-                    </div>
-                </div>
-                {% endfor %}
-			
-            
-				
-            </div>
-            <p class="paragraph-70 tight"><strong class="bold-text-4">We are experts in the increasingly complex methods and techniques available. <br/>‍</strong>BES understands the implications of different facade design solutions in terms of geometry, structural adequacy, performance, energy efficiency, procurement, fabrication, installation, program, and whole life costing.<br/></p>
-            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert →</span></a>
-        </div>
-    </div>
-</div>
-
-
-
-<div id="management" class="section wf-section">
+{% comment %} <div id="management" class="section wf-section">
     <div class="w-container">
         <div class="section-div">
             <div class="columns w-row">
@@ -133,7 +152,13 @@
                     <h2 class="heading-2">Project <br/>Management</h2>
                 </div>
                 <div class="column w-col w-col-7">
-                    <p class="paragraph">We provide a fully tailored management, procurement, repair and refurbishment for facade systems design to meet commercial demands of the construction industry.</p>
+                    <p class="paragraph">We provide a fully tailored m
+                        
+                        
+                        
+                        
+                        
+                        anagement, procurement, repair and refurbishment for facade systems design to meet commercial demands of the construction industry.</p>
                 </div>
             </div>
             <div class="icon-wrapper">
@@ -154,44 +179,7 @@
             <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert →</span></a>
         </div>
     </div>
-</div>
-
-
-
-<div id="scope" class="section wf-section">
-    <div class="w-container">
-        <div class="section-div">
-            <div class="columns w-row">
-                <div class="column-2 w-col w-col-5">
-                    <h2 class="heading-2">Scope</h2>
-                </div>
-                <div class="column w-col w-col-7">
-                    <p class="paragraph tight">Through innovative facade consulting, design and engineering services. BES brings the architects’ vision to life.</p>
-                </div>
-            </div>
-            <div class="collection-list-wrapper-6 w-dyn-list">
-                <div role="list" class="collection-list-7 w-dyn-items w-row">
-                
-
-                   {% for scope in scopes %}
-                    <div role="listitem" class="collection-item-6 w-dyn-item w-col w-col-4">
-                        <div class="icon-div cyan left horizontal">
-                            <div class="icon-text-div horizontal">
-                                <img alt="Building envelope and facade Unitized Curtain Wall" width="52" src="https://uploads-ssl.webflow.com/5ccaa276b7202a16f52b1381/5df5f0a1fbd9267b7c5da2ce_balustrade2.svg" class="icon"/>
-                                <h3 class="icon-heading horizontal">{{scope.title|truncatechars:50}}</h3>
-                            </div>
-                            <div class="text-block-7"><a href="{% url 'projectapp:scope_detailspage' scope.pk %}" class="scope-link">View details →</a></div>
-                        </div>
-                    </div>
-                    {% endfor %}
-
-
-                </div>
-            </div>
-            <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert→</span></a>
-        </div>
-    </div>
-</div>
+</div> {% endcomment %}
 
 
 
@@ -290,7 +278,8 @@
 
 
 
-<div id="projects" class="section wf-section">
+
+{% comment %} <div id="projects" class="section wf-section">
     <div class="w-container">
         <div class="section-div">
             <div class="columns w-row">
@@ -337,18 +326,18 @@
             </div>
         </div>
     </div>
-</div>
+</div> {% endcomment %}
 
 
 <div id="news" class="section wf-section">
     <div class="w-container">
         <div class="section-div">
             <div class="columns w-row">
-                <div class="column-2 w-col w-col-6">
-                    <h2 class="heading-2">Latest News</h2>
+                <div class="column-2 w-col w-col-5">
+                    <h2 class="heading-2">Recent Projects</h2>
                 </div>
-                <div class="column w-col w-col-6">
-                    <p class="paragraph">Find out the latest on our facade projects and our facade engineering services.</p>
+                <div class="column w-col w-col-7">
+                    <p class="paragraph">BES is responsible for leading the design, procurement, programming, testing, installation, repair and refurbishment process of facade systems, on many diverse and prestigious landmark projects especially around Middle East countries.</p>
                 </div>
             </div>
             <div class="collection-list-wrapper-5 w-dyn-list">
@@ -389,26 +378,25 @@
                     <h2 class="heading-2">Contact</h2>
                 </div>
                 <div class="column w-col w-col-6">
-                    <p class="paragraph">Get in touch and let us know how can help you on your next facade project or come visit our office at JLT, Dubai.</p>
+                    <p class="paragraph">Get in touch and let us know how can help you on your next facade project or come visit our office at Dhaka, Bangladesh.</p>
                 </div>
             </div>
             <div data-w-id="1575a563-e1c4-ec47-c568-f401d6f02644" style="opacity:0" class="html-embed w-embed w-iframe">
+                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d58394.35971937304!2d90.36806310713544!3d23.831131342863554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d23.8665296!2d90.3963311!4m3!3m2!1d23.788394999999998!2d90.40298399999999!5e0!3m2!1sen!2sbd!4v1646116111720!5m2!1sen!2sbd" width="940" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
                 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.680845745981!2d90.39695083037563!3d23.79475530307877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70c15ea1de1%3A0x97856381e88fb311!2sBanani%20Model%20Town%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1644652402053!5m2!1sen!2sbd" width="940" height="550" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="html-embed-2 w-embed w-iframe">
-                
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.680845745981!2d90.39695083037563!3d23.79475530307877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70c15ea1de1%3A0x97856381e88fb311!2sBanani%20Model%20Town%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1644652402053!5m2!1sen!2sbd"  width="728" height="560" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.680845745981!2d90.39695083037563!3d23.79475530307877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70c15ea1de1%3A0x97856381e88fb311!2sBanani%20Model%20Town%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1644652402053!5m2!1sen!2sbd" width="728" height="560" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>
+                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14602.680845745981!2d90.39695083037563!3d23.79475530307877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70c15ea1de1%3A0x97856381e88fb311!2sBanani%20Model%20Town%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1644652402053!5m2!1sen!2sbd"  width="728" height="560" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>-->
             </div>
             
             <h3 data-w-id="253b078d-d850-a0a1-10e0-686738a65712" style="opacity:0" class="heading-4">Building Envelope Systems</h3>
-            <p class="paragraph-70">Office 1905 Tower BB1, <br/>Mazaya Business Avenue, <br/>Jumeirah Lake Towers,<br/>Dubai - United Arab Emirates <br/>P.O Box. 283171 <br/>‍<br/>Tel: <a href="tel:+97144255985" class="link-2">+971 (4) 425 5985<br/>‍</a><br/>Email: <a href="mailto:info@bess.ae" class="link-3">info@bess.ae</a><br/></p>
-            <p class="map-link">Location: <a href="https://goo.gl/maps/UnHdKUvX5x42" target="_blank" class="link-3">View map</a><br/></p>
+            <p class="paragraph-70">House-37 , Road-12 , Block- F ,, <br/> Banani, 1213 <br/>Dhaka, Bangladesh. <br/>P.O Box. 1230 <br/>‍<br/>Tel: <a href="tel:+97144255985" class="link-2">+88  01982600163<br/>‍</a><br/>Email: <a href="mailto:dtechbd@yahoo.sg" class="link-3">dtechbd@yahoo.sg</a><br/></p>
+            <p class="map-link">Location: <a href="#" target="_blank" class="link-3">View map</a><br/></p>
         </div>
     </div>
 </div>
-
-
 
 
 
