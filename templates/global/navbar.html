@@ -5,8 +5,16 @@
 
 <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav-bar-projects black w-nav">
     <div class="container-2 w-container">
-        <a href="{% url 'homeapp:homepage' %}" aria-current="page" class="brand-2 w-nav-brand w--current"><img src="{% static 'images/logo.jpeg' %}" width="88" alt="Building Envelope Systems Dubai official logo" class="image-2"/></a>
+        <a href="{% url 'homeapp:homepage' %}" aria-current="page" class="brand-2 w-nav-brand w--current">
+            <img src="{% static 'images/logo.jpeg' %}" style="height: 80px; width: 300px;"  alt="Building Envelope Systems Dubai official logo" class="image-2"/></a>
         <nav role="navigation" class="nav-menu w-nav-menu">
+            
+              <a class="new-nav-button w-nav-link">
+                    <img style="background-color:rgb(255, 255, 255);" src="{% static 'images/whatsapp.png' %}">
+                    <span style=" color:rgb(255, 255, 255);">01982600163</span>
+              </a>
+            
+            
             <div data-delay="0" data-hover="true" class="w-dropdown">
                 <div class="nav-button-dropdown w-dropdown-toggle">
                     <div class="w-icon-dropdown-toggle"></div>
@@ -26,17 +34,19 @@
                     <a href="/#management" class="drop-link black w-dropdown-link">Project Management</a>
                     <a href="#/scope" class="drop-link black w-dropdown-link">Scope</a></nav>
             </div>
-            <div data-delay="0" data-hover="true" class="w-dropdown">
-                <div class="nav-button-dropdown w-dropdown-toggle">
-                    <div class="w-icon-dropdown-toggle"></div>
-                    <div>Products</div>
-                </div>
-                <nav class="dropdown-list w-dropdown-list">
-                    <a href="minimal-sliding-windows-doors.html" class="drop-link w-dropdown-link">Minimal Sliding Windows and Doors</a>
-                    <a href="minimal-pivot-windows-doors.html" class="drop-link w-dropdown-link">Minimal Pivot Windows and Doors</a>
-                    <a href="guillotine-automatic-multi-leaf-vertical-sliding-windows-doors.html" class="drop-link w-dropdown-link">Guillotine Windows and Doors</a>
-                </nav>
-            </div>
+            
+            <!--<div data-delay="0" data-hover="true" class="w-dropdown">-->
+            <!--    <div class="nav-button-dropdown w-dropdown-toggle">-->
+            <!--        <div class="w-icon-dropdown-toggle"></div>-->
+            <!--        <div>Products</div>-->
+            <!--    </div>-->
+            <!--    <nav class="dropdown-list w-dropdown-list">-->
+            <!--        <a href="minimal-sliding-windows-doors.html" class="drop-link w-dropdown-link">Minimal Sliding Windows and Doors</a>-->
+            <!--        <a href="minimal-pivot-windows-doors.html" class="drop-link w-dropdown-link">Minimal Pivot Windows and Doors</a>-->
+            <!--        <a href="guillotine-automatic-multi-leaf-vertical-sliding-windows-doors.html" class="drop-link w-dropdown-link">Guillotine Windows and Doors</a>-->
+            <!--    </nav>-->
+            <!--</div>-->
+            
             <a href="/#projects" class="new-nav-button w-nav-link">Projects</a>
             <a href="/#news" class="new-nav-button w-nav-link">News</a>
             <a href="/#contact" class="new-nav-button w-nav-link">Contact</a>
@@ -50,7 +60,7 @@
  >
     <div class="container-2 w-container">
         <a href="{% url 'homeapp:homepage' %}" aria-current="page" class="brand-2 w-nav-brand w--current">
-            <img src="https://uploads-ssl.webflow.com/5ccaa276b7202a688a2b135c/5ccaa276b7202a8a062b139c_BES logo white.svg" width="88" alt="Building Envelope Systems Dubai official logo" class="image-2"/></a>
+            <img src="{% static 'images/logo.jpeg' %}" style="height: 80px; width: 300px;"  alt="Building Envelope Systems logo" class="image-2"/></a>
         <nav role="navigation" class="nav-menu w-nav-menu">
             <div data-delay="0" data-hover="false" class="w-dropdown">
                 <div class="nav-button-dropdown mobile w-dropdown-toggle">
@@ -73,7 +83,12 @@
                 </div>
                 <nav class="dropdown-list w-dropdown-list"><a href="minimal-sliding-windows-doors.html" class="drop-link w-dropdown-link">Minimal Sliding Windows and Doors</a><a href="minimal-pivot-windows-doors.html" class="drop-link w-dropdown-link">Minimal Pivot Windows and Doors</a><a href="guillotine-automatic-multi-leaf-vertical-sliding-windows-doors.html" class="drop-link w-dropdown-link">Guillotine Windows and Doors</a></nav>
             </div>
-            <a href="#projects" class="new-nav-button w-nav-link">Projects</a><a href="#news" class="new-nav-button w-nav-link">News</a><a href="#contact" class="new-nav-button w-nav-link">Contact</a>
+            <a href="#projects" class="new-nav-button w-nav-link">Projects</a><a href="#news" class="new-nav-button w-nav-link">News</a>
+            <a href="#contact" class="new-nav-button w-nav-link">Contact</a>
+              <a style="background-color:#fff;" class="new-nav-button w-nav-link">
+                    <img style="color:#fff;" src="{% static 'images/whatsapp.png' %}">
+                    <span style="color:black;">01982600163</span>
+                </a>
         </nav>
         <div class="menu-button w-nav-button">
             <div class="icon w-icon-nav-menu"></div>
