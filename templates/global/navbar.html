@@ -8,13 +8,19 @@
         <a href="{% url 'homeapp:homepage' %}" aria-current="page" class="brand-2 w-nav-brand w--current">
             <img src="{% static 'images/logo.jpeg' %}" style="height: 80px; width: 300px;"  alt="Building Envelope Systems Dubai official logo" class="image-2"/></a>
         <nav role="navigation" class="nav-menu w-nav-menu">
-            
-              <a class="new-nav-button w-nav-link">
-                    <img style="background-color:rgb(255, 255, 255);" src="{% static 'images/whatsapp.png' %}">
-                    <span style=" color:rgb(255, 255, 255);">01982600163</span>
+            <div style="margin-right:30px;">
+              <a class="">
+                <i style="color:#1877F2;font-size:25px;padding:6px;height:30px;width:30px;margin-right:6px; margin-left:6px;"  class="fa-brands fa-facebook"></i>
+              </a> 
+              <a class="">
+                <i style="color:#E4405F;font-size:25px;padding:6px;height:30px;width:30px;margin-right:6px; margin-left:6px;" class="fa-brands fa-instagram"></i>
               </a>
-            
-            
+              <a class="" href="https://wa.me/+8801880871297?text=Wellcome to live whatsapp chat">
+                <i style="color:#25D366;font-size:25px;padding:6px;height:30px;width:30px;margin-right:6px; margin-left:6px;" class="fa-brands fa-whatsapp-square"></i>  
+              </a>  
+            </div>
+              <span style=" color:rgb(255, 255, 255);">01982600163</span>
+
             <div data-delay="0" data-hover="true" class="w-dropdown">
                 <div class="nav-button-dropdown w-dropdown-toggle">
                     <div class="w-icon-dropdown-toggle"></div>
@@ -22,7 +28,8 @@
                 </div>
                 <nav class="dropdown-list w-dropdown-list">
                     <a href="{% url 'homeapp:who_we_are_page' %}" class="drop-link black w-dropdown-link">Who we are</a>
-                    <a href="{% url 'homeapp:who_we_are_for_page' %}" class="drop-link black w-dropdown-link">Who we&#x27;re for </a></nav>
+                    <a href="{% url 'homeapp:who_we_are_for_page' %}" class="drop-link black w-dropdown-link">Who we&#x27;re for </a>
+                </nav>
             </div>
             <div data-delay="0" data-hover="true" class="w-dropdown">
                 <div class="nav-button-dropdown w-dropdown-toggle">
@@ -85,10 +92,25 @@
             </div>
             <a href="#projects" class="new-nav-button w-nav-link">Projects</a><a href="#news" class="new-nav-button w-nav-link">News</a>
             <a href="#contact" class="new-nav-button w-nav-link">Contact</a>
-              <a style="background-color:#fff;" class="new-nav-button w-nav-link">
+
+            <a class="new-nav-button w-nav-link">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a class="new-nav-button w-nav-link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a class="new-nav-button w-nav-link">
+                <i style="color:#3b5998;" class="fa-brands fa-whatsapp-square"></i>
+                     <span style=" color:rgb(255, 255, 255);">01982600163</span>
+              </a>
+             
+{% comment %}             
+            
+            
+            <a style="background-color:#fff;" class="new-nav-button w-nav-link">
                     <img style="color:#fff;" src="{% static 'images/whatsapp.png' %}">
                     <span style="color:black;">01982600163</span>
-                </a>
+                </a> {% endcomment %}
         </nav>
         <div class="menu-button w-nav-button">
             <div class="icon w-icon-nav-menu"></div>
