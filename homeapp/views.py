@@ -10,7 +10,16 @@ def home(request):
     design_engineerings = Design_engineering.objects.all()[:6]
     project_managements = Project_management.objects.all()[:6]
 
+    upcoming =Project.objects.filter(category='UP')
+    running =Project.objects.filter(category='RN')
+    landmark =Project.objects.filter(category='LN')
+    complated =Project.objects.filter(category='CO')
+
     context={
+        'upcoming':upcoming,
+        'running':running,
+        'landmark':landmark,
+        'complated':complated,
         'scopes':scopes,
         'projects':projects,
         'consultancys':consultancys,

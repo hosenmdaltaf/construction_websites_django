@@ -9,7 +9,7 @@ class CaseFileAdmin(admin.StackedInline):
     model = ProjectImages
 
 class Projectlist(admin.ModelAdmin):
-    list_display = ('title','image_tag','location','contractors','developer')
+    list_display = ('title','category','image_tag','location','contractors','developer')
     inlines = [CaseFileAdmin]
    
 admin.site.register(Project,Projectlist)

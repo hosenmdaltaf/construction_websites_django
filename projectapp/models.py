@@ -5,9 +5,17 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.html import mark_safe
 from django.conf import settings
 
+
+CATEGORY_CHOICES = (
+("LN", "Landmark"),
+("RN", "Running"),
+("UP", "Upcoming"),
+("CO", "Complated"),)
+         
 # Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=255,help_text='title must be in 255 character')
+    category = models.CharField(choices=CATEGORY_CHOICES,max_length=2,null=True,blank=True)
     thumnail_image =models.ImageField(upload_to="project_imgs",help_text='upload thumnail image for project')
     details = RichTextUploadingField(null=True,blank=True,help_text="write details about your project")
     services = RichTextUploadingField(null=True,blank=True,help_text="write service of your project as a list")
