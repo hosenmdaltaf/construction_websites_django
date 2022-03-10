@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="scope-header wf-section">
+    <div class="container-10 w-container">
+        <div class="scope-header-div">
+            <h1 class="heading-2 scope">{{object.title}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container-9 w-container">
+    <h3 data-w-id="e2eb9168-b021-aba7-ba86-bdbaf881c7d8" style="opacity:1" class="subhead">Category name</h3>
+    <div data-w-id="2d0e94ff-8826-bcdd-2e25-b84de2c3d495" style="opacity:1" class="w-dyn-list">
+        <div role="list" class="collection-list-5 w-dyn-items">
+
+            {% for project in category %}
+            <div role="listitem" class="collection-item-5 w-dyn-item">
+                <a href="{% url 'projectapp:project_detailspage'  project.pk %}" aria-current="page" class="project-link-block w-inline-block w--current">
+                    <main style="background-image:url({{project.thumnail_image.url}})" class="project-menu-thumb"></main>
+                    <div class="icon-text-div">
+                        <h4 class="project-link-name">{{project.title}}</h4> 
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

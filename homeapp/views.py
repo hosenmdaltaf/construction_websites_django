@@ -10,16 +10,7 @@ def home(request):
     design_engineerings = Design_engineering.objects.all()[:6]
     project_managements = Project_management.objects.all()[:6]
 
-    upcoming =Project.objects.filter(category='UP')
-    running =Project.objects.filter(category='RN')
-    landmark =Project.objects.filter(category='LN')
-    complated =Project.objects.filter(category='CO')
-
     context={
-        'upcoming':upcoming,
-        'running':running,
-        'landmark':landmark,
-        'complated':complated,
         'scopes':scopes,
         'projects':projects,
         'consultancys':consultancys,
@@ -27,6 +18,13 @@ def home(request):
         'design_engineerings':design_engineerings
     }
     return render(request,'homeapp/homepage.html',context)
+
+def category_filter(request,pk):
+    category = Project.objects.filter(categories=pk)
+    print('-----------------------test----------------tst------')
+    print(category)
+    context={'category': category}
+    return render(request,'homeapp/category.html',context )
 
 def who_we_are(request):
     return render(request,'homeapp/who_we_are.html') 
