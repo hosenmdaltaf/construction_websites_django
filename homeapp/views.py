@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from projectapp.models import Scope,Project
+from projectapp.models import Scope,Project,Category
 from .models import Consultancy,Project_management,Design_engineering
 
 def home(request):
@@ -21,10 +21,16 @@ def home(request):
 
 def category_filter(request,pk):
     category = Project.objects.filter(categories=pk)
-    print('-----------------------test----------------tst------')
-    print(category)
-    context={'category': category}
+    cat_name =Category.objects.filter(pk=pk).first()
+    context={
+        'category': category,
+        'cat_name':cat_name
+    }
     return render(request,'homeapp/category.html',context )
+
+
+def product(request):
+    return render(request,'global/product.html') 
 
 def who_we_are(request):
     return render(request,'homeapp/who_we_are.html') 

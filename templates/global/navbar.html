@@ -56,6 +56,7 @@
             <!--</div>-->
             
             {% comment %} <a href="/#projects" class="new-nav-button w-nav-link">Projects</a> {% endcomment %}
+          
 
             <div data-delay="0" data-hover="true" class="w-dropdown">
                 <div class="nav-button-dropdown w-dropdown-toggle">
@@ -64,15 +65,14 @@
                 </div>
                 <nav class="dropdown-list w-dropdown-list">
                     {% for cat in categories %}
+                    
                     <a href="{{cat.get_absolute_url}}" class="drop-link black w-dropdown-link">{{cat.name}}</a>
                     {% endfor %}
                 </nav>
             </div>
 
 
-
-
-            <a href="/#news" class="new-nav-button w-nav-link">News</a>
+            <a href="{% url 'homeapp:product_page' %}" class="new-nav-button w-nav-link">Product</a>
             <a href="/#contact" class="new-nav-button w-nav-link">Contact</a>
         </nav>
         <div class="menu-button w-nav-button">

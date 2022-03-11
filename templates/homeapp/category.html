@@ -5,14 +5,14 @@
 <div class="scope-header wf-section">
     <div class="container-10 w-container">
         <div class="scope-header-div">
-            <h1 class="heading-2 scope">{{object.title}}</h1>
+            <h1 class="heading-2 scope">Our {{cat_name}} Projects</h1>
         </div>
     </div>
 </div>
 
-<div class="container-9 w-container">
-    <h3 data-w-id="e2eb9168-b021-aba7-ba86-bdbaf881c7d8" style="opacity:1" class="subhead">Category name</h3>
-    <div data-w-id="2d0e94ff-8826-bcdd-2e25-b84de2c3d495" style="opacity:1" class="w-dyn-list">
+<div class="container-9 w-container" style="margin-top: 30px !important;">
+    {% comment %} <h3  style="opacity:1; text-align:center;" class="subhead">Category name</h3> {% endcomment %}
+    <div  style="opacity:1" class="w-dyn-list">
         <div role="list" class="collection-list-5 w-dyn-items">
 
             {% for project in category %}
