@@ -162,14 +162,16 @@ body {
             {% comment %} <p class="paragraph-70 tight"><strong class="bold-text-4">We are experts in the increasingly complex methods and techniques available. <br/>‍</strong>BES understands the implications of different facade design solutions in terms of geometry, structural adequacy, performance, energy efficiency, procurement, fabrication, installation, program, and whole life costing.<br/></p>
             <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to an Expert →</span></a> {% endcomment %}
         </div>
+   
+{% comment %}    
     </div>
-</div>
+</div> {% endcomment %}
 
 
 
-<div id="consultancy" class="section wf-section">
-    <div class="w-container">
-        <div class="section-div">
+{% comment %} <div id="consultancy" class="section wf-section">
+    <div class="w-container"> {% endcomment %}
+        <div class="section-div" id="consultancy">
             {% comment %} <div class="columns w-row">
                 <div class="column-2 w-col w-col-5">
                     <h2 class="heading-2">Facade Consultancy</h2>
@@ -195,7 +197,13 @@ body {
             <p class="paragraph-70"><strong class="bold-text-2">Looking to have your project evaluated?<br/></strong>Our highly qualified team establish the best facade building options available for your project and develop innovative facade design &amp; construction solutions that will provide optimal performance, construct-ability and satisfy budget constraints.<br/></p>
             <a href="#contact" class="clear-button w-button"><span class="learn-span">Speak to our consultant →</span></a>
         </div>
-    </div>
+    {% comment %} </div>
+</div> {% endcomment %}
+
+
+
+   
+</div>
 </div>
 
 
@@ -400,7 +408,7 @@ body {
                 <div role="list" class="collection-list-6 w-dyn-items">
 
                     {% for project in projects %}
-                    <div data-w-id="3da58f03-fdd8-3628-a5d2-ef6d4fe7bc7e" style="opacity:0" role="listitem" class="collection-item-2 _3 w-dyn-item">
+                    <div data-w-id="3da58f03-fdd8-3628-a5d2-ef6d4fe7bc7e" style="opacity:0; margin-bottom:10px;" role="listitem" class="collection-item-2 _3 w-dyn-item">
                         <div class="grey-div">
                             <div data-w-id="22e1163c-45b4-b1b5-fe81-7e30a284207b" style="background-image:url({{project.thumnail_image.url}});opacity:0" class="div-block-12">
                                 <div data-w-id="2d441236-0d1c-255c-10c5-af4e1e5a25b3" style="opacity:0" class="location-div">
@@ -409,7 +417,7 @@ body {
                             </div>
                             <div class="service-div line news">
                                 <h3 class="heading-7">{{project.title}}</h3>
-                                <p data-w-id="d4a9fea8-e767-b6eb-0060-bd09afebcd3f" style="opacity:0" class="news-para">{{project.details|safe|truncatechars:200}}.</p>
+                                {% comment %} <p data-w-id="d4a9fea8-e767-b6eb-0060-bd09afebcd3f" style="opacity:0" class="news-para">{{project.details|safe|truncatechars:200}}.</p> {% endcomment %}
                                 <a href="{% url 'projectapp:project_detailspage'  project.pk %}" class="project-button w-button">View project →</a>
                             </div>
                         </div>
