@@ -30,7 +30,7 @@ def category_filter(request,pk):
 
 
 def product(request):
-    return render(request,'global/product.html') 
+    return render(request,'homeapp/product.html') 
 
 def who_we_are(request):
     return render(request,'homeapp/who_we_are.html') 
