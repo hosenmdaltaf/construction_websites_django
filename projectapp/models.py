@@ -51,6 +51,7 @@ class ProjectImages(models.Model):
 
 class Scope(models.Model):
     title =  models.CharField(max_length=255,help_text='title must be in 255 character')
+    icon =models.FileField(upload_to="Scope_images",null=True,blank=True,help_text='please upload svg icon')
     short_description = models.TextField(null=True,blank=True,help_text="write a very short details about your project")
     long_text = RichTextUploadingField(null=True,blank=True,help_text="write long details about your project")
 
