@@ -4,6 +4,7 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.html import mark_safe
 from django.conf import settings
+from numpy import product
 
 # Create your models here. 
 class Consultancy(models.Model): 
@@ -41,3 +42,13 @@ class Project_management(models.Model):
     def image_tag(self):
         if self.icon != '':
             return mark_safe('<img src="%s%s" width="50" height="50" />' % (f'{settings.MEDIA_URL}', self.icon))
+
+class Product(models.Model):
+    name = models.CharField(max_length=255,help_text='title must be in 255 character')
+    product_url =models.URLField(null=True,blank=True)
+    image =models.ImageField(upload_to="product_image",null=True,blank=True)
+    details = RichTextUploadingField(null=True,blank=True,help_text="try not to put very large text")
+
+    def image_tag(self):
+        if self.image != '':
+            return mark_safe('<img src="%s%s" width="50" height="50" />' % (f'{settings.MEDIA_URL}', self.image)) 
