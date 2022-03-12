@@ -18,7 +18,7 @@ admin.site.register(Project,Projectlist)
 admin.site.register(Category)
 
 class Scopelist(admin.ModelAdmin):
-    list_display = ('title','short_description')
+    list_display = ('title','short_description') 
    
 admin.site.register(Scope,Scopelist)
 

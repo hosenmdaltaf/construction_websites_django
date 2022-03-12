@@ -51,4 +51,4 @@ class Product(models.Model):
 
     def image_tag(self):
         if self.image != '':
-            return mark_safe('<img src="%s%s" width="50" height="50" />' % (f'{settings.MEDIA_URL}', self.image)) 
+            return mark_safe('<img src="%s%s" width="50" height="50" />' % (f'{settings.MEDIA_URL}', self.image))

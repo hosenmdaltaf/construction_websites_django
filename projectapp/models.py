@@ -56,4 +56,9 @@ class Scope(models.Model):
     long_text = RichTextUploadingField(null=True,blank=True,help_text="write long details about your project")
 
     def __str__(self):
-        return str(self.title)  
+        return str(self.title) 
+
+    def image_tag(self):
+        if self.icon != '':
+            return mark_safe('<img src="%s%s" width="50" height="50" />' % (f'{settings.MEDIA_URL}', self.icon))
+ 
