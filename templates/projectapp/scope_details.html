@@ -6,19 +6,24 @@
 
 
 
-    <div class="scope-header wf-section">
+    <div class="scope-header-page  wf-section">
         <div class="container-10 w-container">
-            <div class="scope-header-div">
+            {% comment %} <div class="scope-header-div">
                 <h1 class="heading-2 scope">{{object.title}}</h1>
                 <p>{{object.short_description}}</p>
-                <!-- <p data-w-id="807b3a65-6090-54b6-b60a-1f1b2a0aba2c" style="opacity:1" class="intro w-dyn-bind-empty">
-             hi ju ------------   {{object.short_description}}</p> -->
-            </div>
-        </div>
+            </div> {% endcomment %}
+        </div> 
     </div>
 
         <div class="container-10 w-container">
+
+            {% comment %} <div class="scope-header-div">
+                <h1 class="heading-2 scope">{{object.title}}</h1>
+                <p>{{object.short_description}}</p>
+            </div> {% endcomment %}
             <div class="scope-header-div">
+                <h1 class="heading-2 scope">{{object.title}}</h1>
+                <h3>{{object.short_description}}</h3>
   
                 <p>{{object.long_text|safe}}</p>
             </div>
@@ -27,6 +32,8 @@
 
 
 
+
+{% comment %} 
         <div class="container-10 w-container">
             
           
@@ -45,7 +52,7 @@
 
 
             </div>
-        </div>
+        </div> {% endcomment %}
 
 
 
