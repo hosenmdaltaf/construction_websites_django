@@ -3,7 +3,7 @@ from projectapp.models import Scope,Project,Category
 from .models import Consultancy,Design_engineering,Product
 
 def home(request):
-    scopes = Scope.objects.all()[:6]
+    scopes = Scope.objects.all().order_by('-id')[:6]
     projects = Project.objects.all()[:6]
 
     consultancys = Consultancy.objects.all()[:6]
