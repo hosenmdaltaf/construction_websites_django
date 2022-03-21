@@ -30,7 +30,7 @@
                             <div class="service-div line news">
                                 <h3 class="heading-7">{{product.name}}</h3>
                                 {% comment %} <p data-w-id="d4a9fea8-e767-b6eb-0060-bd09afebcd3f" style="opacity:0" class="news-para">{{project.details|safe|truncatechars:200}}.</p> {% endcomment %}
-                                <a href="{{product.product_url}}" class="project-button w-button">View project →</a>
+                                <a  href="{% url 'homeapp:product_detailspage' product.pk %}" class="project-button w-button">View project →</a>
                             </div>
                         </div>
                     </div>

@@ -38,6 +38,15 @@ def product(request):
     }
     return render(request,'homeapp/product.html',context) 
 
+def product_details(request,pk):
+    object = Product.objects.get(pk=pk)
+    all = Product.objects.all()
+    context ={
+        'object':object,
+        'all':all
+    }
+    return render(request,'homeapp/product_details.html',context)
+
 def who_we_are(request):
     return render(request,'homeapp/who_we_are.html') 
 
