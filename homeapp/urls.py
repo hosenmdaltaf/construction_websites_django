@@ -9,6 +9,7 @@ urlpatterns = [
     path('cat/<int:pk>/', views.category_filter, name='categorypage'),
     path('product/', views.product, name='product_page'),
     path('product/<int:pk>/', views.product_details, name='product_detailspage'),
+    path('career/', views.career, name='career_page'),
     path('who_we_are/', views.who_we_are, name='who_we_are_page'),
     path('who_we_are_for/', views.who_we_are_for, name='who_we_are_for_page'),  
     

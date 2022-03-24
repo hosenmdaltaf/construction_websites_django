@@ -52,3 +52,14 @@ class Product(models.Model):
     def image_tag(self):
         if self.image != '':
             return mark_safe('<img src="%s%s" width="50" height="50" />' % (f'{settings.MEDIA_URL}', self.image))
+
+class Contact(models.Model):
+    name = models.CharField(max_length=255,null=True,blank=True)
+    phone = models.CharField(max_length=255,null=True,blank=True)
+    email =models.EmailField(null=True,blank=True)
+    message =models.TextField(null=True,blank=True)
+    file = models.FileField(upload_to='documents/',blank=True)
+    position = models.CharField(max_length=255,null=True,blank=True)
+
+    def __str__(self):
+        return str(self.name)

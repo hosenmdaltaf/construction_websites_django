@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from projectapp.models import Scope,Project,Category
-from .models import Consultancy,Design_engineering,Product
+from .models import Consultancy,Design_engineering,Product,Contact
 
 def home(request):
     scopes = Scope.objects.all().order_by('-id')[:6]
@@ -52,6 +52,21 @@ def who_we_are(request):
 
 def who_we_are_for(request):
     return render(request,'homeapp/who_we_are_for.html')
+
+def career(request):
+    # if request.method =="POST" and request.FILES['file']:
+    if request.method == 'POST' and request.FILES.get('file', False):
+        name = request.POST.get('name')
+        phone =request.POST.get('phone')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        position = request.POST.get('position')
+        file = request.FILES['file']
+        Contact.objects.create(name=name,email=email,message=message,phone=phone,position=position,file=file)
+        return render(request,'global/thankyou.html')
+    
+    return render(request,'global/career.html')
+
 
 
 
